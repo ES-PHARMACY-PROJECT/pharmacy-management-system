@@ -28,6 +28,5 @@ public class Estoque {
     @OneToOne
     private Medicamento medicamento;
 
-    
 }
 

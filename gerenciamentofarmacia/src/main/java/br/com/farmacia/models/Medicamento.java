@@ -29,7 +29,8 @@ public class Medicamento {
 
     private boolean precisaReceita;
 
-    private int qtdEstoque;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Estoque estoque;
 
     private LocalDate validade;
 
