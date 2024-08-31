@@ -14,8 +14,6 @@ INSERT INTO Cliente (nome, email, cpf) VALUES ('Letícia Melo', 'leticia.melo@ex
 INSERT INTO users (email, password, funcionario_id) VALUES ('carlos.silva@example.com', '$2a$10$rvo2dDExpjs5HlX3aBen2.sxkwkvGdAn0ZwhJ8UgKjjLnCbBf3yLG', 1);
 INSERT INTO users (email, password, funcionario_id) VALUES ('mariana.souza@example.com', '$2a$10$rvo2dDExpjs5HlX3aBen2.sxkwkvGdAn0ZwhJ8UgKjjLnCbBf3yLG', 2);
 INSERT INTO users (email, password, funcionario_id) VALUES ('fernanda.oliveira@example.com', '$2a$10$rvo2dDExpjs5HlX3aBen2.sxkwkvGdAn0ZwhJ8UgKjjLnCbBf3yLG', 3);
-INSERT INTO users (email, password) VALUES ('felipe.brandao@example.com', '$2a$10$rvo2dDExpjs5HlX3aBen2.sxkwkvGdAn0ZwhJ8UgKjjLnCbBf3yLG');
-INSERT INTO users (email, password) VALUES ('leticia.melo@example.com', '$2a$10$rvo2dDExpjs5HlX3aBen2.sxkwkvGdAn0ZwhJ8UgKjjLnCbBf3yLG');
 
 -- MEDICAMENTOS
 
