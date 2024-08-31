@@ -29,11 +29,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf
-                .ignoringRequestMatchers("/logout") // Ignora CSRF para a URL de logout
+                .ignoringRequestMatchers("/logout", "/h2-console/**") // Ignora CSRF para a URL de logout
             )
 
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/register", "/login").permitAll()
+                .requestMatchers("/register", "/login", "/h2-console/**").permitAll()
                 .requestMatchers("/gerentes").hasRole("GERENTE")
                 .anyRequest().authenticated()
             )
@@ -46,6 +46,10 @@ public class SecurityConfig {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login")
                 .permitAll()
+            )
+
+            .headers(headers -> headers
+                .frameOptions().disable() // Permite que o console H2 seja carregado em um iframe
             );
 
         return http.build();
