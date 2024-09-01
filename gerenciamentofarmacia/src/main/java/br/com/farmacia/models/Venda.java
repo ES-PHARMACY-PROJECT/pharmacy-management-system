@@ -27,7 +27,7 @@ public class Venda {
     private Cliente cliente;
 
     @ManyToOne
-    private Vendedor vendedor;
+    private Funcionario vendedor;
 
     //Cascade: todas as operações de persistência aplicadas na entidade Venda serão
     //automaticamente aplicadas aos ItemVenda associados

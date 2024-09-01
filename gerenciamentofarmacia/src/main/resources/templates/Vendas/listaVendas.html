@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lista de Vendas - Farmácia</title>
@@ -29,7 +29,7 @@
                     <td th:text="${venda.id}"></td>
                     <td th:text="${venda.data}"></td>
                     <td th:text="${venda.cliente.nome}"></td>
-                    <td th:text="${venda.vendedor.nome}"></td>
+                    <td th:text="${venda.vendedor != null ? venda.vendedor.nome : 'N/A'}"></td>
                     <td th:text="${venda.valorTotal}"></td>
                     <td>
                         <a th:href="@{/vendas/editar/{id}(id=${venda.id})}" class="btn btn-primary">Editar</a>
